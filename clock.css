@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+}
+
+.clock-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.clock {
+  background: #0f0f1a;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 8px;
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.1);
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.digits {
+  font-size: 5rem;
+  color: #00e5ff;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-shadow: 0 0 10px #00e5ff, 0 0 30px rgba(0, 229, 255, 0.4);
+}
+
+.unit-label {
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #335c63;
+}
+
+.sep {
+  font-size: 5rem;
+  color: #00e5ff;
+  line-height: 1;
+  margin-bottom: 16px;
+  text-shadow: 0 0 10px #00e5ff;
+  animation: blink 1s step-end infinite;
+}
+
+.ampm {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #ff2d78;
+  margin-bottom: 16px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 45, 120, 0.3);
+  border-radius: 3px;
+  text-shadow: 0 0 8px #ff2d78;
+}
+
+.date-text {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #335c63;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.1; }
+}
